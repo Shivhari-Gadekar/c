@@ -61,8 +61,8 @@ function updateCert() {
   const mentorTitle = document.getElementById('mentorTitle').value.trim() || 'Program Coordinator';
   const certId = document.getElementById('certId').value.trim() || '——';
   const issueDate = document.getElementById('issueDate').value;
-  const logoUrl = document.getElementById('certLogoImg').src = './src/img/logo.jpg';
-  const signUrl = document.getElementById('sigPreview').src = './src/img/signature.png';
+  const logoUrl = document.getElementById('certLogoImg').src = './logo.jpg';
+  const signUrl = document.getElementById('sigPreview').src = './signature.png';
  
   // Prefix
   const prefix = gender === 'Female' ? 'Ms.' : gender === 'Male' ? 'Mr.' : '';
