@@ -82,12 +82,11 @@ function updateCert() {
   document.getElementById('certDomainVal').textContent = domain === 'the specified domain' ? '—' : domain;
   document.getElementById('certDurationVal').textContent = duration;
   document.getElementById('certCollegeVal').textContent = college;
-  document.getElementById('certGradeVal').textContent = grade.split(' ')[0];
+  document.getElementById('certGradeVal').textContent = grade;
  
   // Company
   document.getElementById('certCompanyName').textContent = company;
   document.getElementById('certCompanyFooter').textContent = company;
-  document.getElementById('certCompanyFooter2').textContent = "www.sgnexustechnologies.in";
  
   // Cert ID & date
   document.getElementById('certCertId').textContent = certId;
@@ -98,7 +97,7 @@ function updateCert() {
   document.getElementById('certMentorTitle').textContent = mentorTitle;
  
   // Watermark
-  document.getElementById('certWatermarkText').textContent = company.length > 3 ? company.toUpperCase().split(' ')[0] : 'CERTIFIED';
+  document.getElementById('certWatermarkText').textContent = company.length > 3 ? company.toUpperCase() : 'CERTIFIED';
 }
  
 function formatDate(dateStr) {
@@ -149,7 +148,7 @@ function loadSample() {
   document.getElementById('startDate').value = '2026-02-01';
   document.getElementById('endDate').value = '2026-05-31';
   document.getElementById('duration').value = '8 Weeks';
-  document.getElementById('grade').value = 'A+ (Outstanding)';
+  document.getElementById('grade').value = 'Outstanding';
   document.getElementById('companyName').value = 'SGNexus Technologies';
   document.getElementById('mentorName').value = 'Shivhari Gadekar';
   document.getElementById('mentorTitle').value = 'Managing Director';
@@ -168,7 +167,7 @@ function resetForm() {
     document.getElementById(id).value = '';
   });
   document.getElementById('gender').value = 'Male';
-  document.getElementById('grade').value = 'A+ (Outstanding)';
+  document.getElementById('grade').value = 'Outstanding';
   // Generate a fresh unique cert ID
   document.getElementById('certId').value = generateCertId('');
   setTodayDate();
@@ -176,7 +175,6 @@ function resetForm() {
   state.logoUrl = state.sigUrl = state.hrSigUrl = null;
   document.getElementById('certLogoImg').style.display = 'none';
   document.getElementById('certSigImgContainer').style.display = 'none';
-  document.getElementById('certHRSigImgContainer').style.display = 'none';
   updateCert();
   showToast('Form reset!', '🔄');
 }
