@@ -326,8 +326,8 @@
  
   /* ===== THE CERTIFICATE ===== */
   #certificate {
-    width: 1122px; /* A4 landscape at 96dpi */
-    height: 794px;
+    width: 840px;
+    height: 600px;
     background: #fff;
     position: relative;
     overflow: hidden;
@@ -586,7 +586,7 @@
   /* Details grid */
   .cert-details-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 2fr 1fr 2fr 1fr;
     gap: 0;
     border: 1px solid rgba(26,39,68,0.1);
     border-radius: 6px;
