@@ -39,11 +39,11 @@ function scaleCertificate() {
   const cert = document.getElementById('certificate');
   if (!container || !cert) return;
   const containerWidth = container.clientWidth;
-  const certWidth = 1122;
+  const certWidth = 840;
   const scale = Math.min(containerWidth / certWidth, 1);
   cert.style.transform = `scale(${scale})`;
   cert.style.transformOrigin = 'top left';
-  container.style.height = (794 * scale) + 'px';
+  container.style.height = (600 * scale) + 'px';
 }
  
 // ===== UPDATE CERTIFICATE =====
@@ -197,8 +197,8 @@ async function downloadPDF() {
       useCORS: true,
       allowTaint: true,
       backgroundColor: '#ffffff',
-      width: 1122,
-      height: 794,
+      width: 840,
+      height: 600,
       logging: false,
     });
  
@@ -206,9 +206,9 @@ async function downloadPDF() {
     cert.style.transformOrigin = originalOrigin;
  
     const { jsPDF } = window.jspdf;
-    const pdf = new jsPDF({ orientation: 'landscape', unit: 'px', format: [1122, 794] });
+    const pdf = new jsPDF({ orientation: 'landscape', unit: 'px', format: [840, 600] });
     const imgData = canvas.toDataURL('image/jpeg', 1.0);
-    pdf.addImage(imgData, 'JPEG', 0, 0, 1122, 794);
+    pdf.addImage(imgData, 'JPEG', 0, 0, 840, 600);
  
     const name = document.getElementById('studentName').value.trim() || 'Student';
     pdf.save(`${name.replace(/\s+/g,'_')}_Internship_Certificate.pdf`);
@@ -233,8 +233,8 @@ async function downloadImage() {
       useCORS: true,
       allowTaint: true,
       backgroundColor: '#ffffff',
-      width: 1122,
-      height: 794,
+      width: 840,
+      height: 600,
       logging: false,
     });
  
