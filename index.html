@@ -10,6 +10,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <body>
  
@@ -109,11 +110,11 @@
         <div class="field-group">
           <label>Performance Grade</label>
           <select id="grade" onchange="updateCert()">
-            <option value="A+ (Outstanding)">A+ (Outstanding)</option>
-            <option value="A (Excellent)">A (Excellent)</option>
-            <option value="B+ (Very Good)">B+ (Very Good)</option>
-            <option value="B (Good)">B (Good)</option>
-            <option value="C (Satisfactory)">C (Satisfactory)</option>
+            <option value="Outstanding">Outstanding</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Very Good">Very Good</option>
+            <option value="Good">Good</option>
+            <option value="Satisfactory">Satisfactory</option>
           </select>
         </div>
       </div>
@@ -192,7 +193,7 @@
     <div class="preview-toolbar">
       <div class="preview-label">
         <div class="live-dot"></div>
-        Live Preview — A4 Landscape
+        Live Preview
       </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;display:none;">
         <button class="btn btn-outline" style="font-size:12px;" onclick="resetForm()">
@@ -269,7 +270,6 @@
             </div>
             <div>
               <div class="cert-company-name" id="certCompanyName">Company Name</div>
-              <div class="cert-company-tagline">Human Resources</div>
             </div>
           </div>
           <div class="cert-header-right">
@@ -346,10 +346,14 @@
  
           <!-- Right sig: HR / Company -->
           <div class="cert-sig-block" style="text-align:right;">
-            <div id="certHRSigImgContainer" style="display:none;margin-bottom:2px;text-align:right;">
-              <img class="cert-sig-img" id="certHRSigImg" style="margin-right:0;" alt="HR Signature">
+            <div class="cert-sig-title" style="position: relative;">
+              <span class="material-symbols-outlined" style="position: absolute;left: 174px;bottom: -2px; margin-top: 2px;">mail</span>
+              contact@sgnexustechnologies.in
             </div>
-            <div class="cert-sig-title" id="certCompanyFooter2" style="color:#c9a84c;font-weight:600;">www.sgnexustechnologies.in</div>
+            <div class="cert-sig-title" style="color:#c9a84c;font-weight:600; position: relative;margin: 2px 0 2px 0;">
+              <span class="material-symbols-outlined" style="position: absolute;left: 190px;bottom: -2px;">language</span>
+              www.sgnexustechnologies.in
+            </div>
           </div>
         </div>
  
